@@ -1,78 +1,31 @@
 {
-  "homepage": "https://weareedt.github.io/jdn-sts/",
-  "name": "openai-realtime-console",
-  "version": "0.0.0",
-  "type": "module",
-  "private": true,
-  "dependencies": {
-    "@openai/realtime-api-beta": "github:openai/openai-realtime-api-beta",
-    "@splinetool/react-spline": "^4.0.0",
-    "@splinetool/runtime": "^1.9.36",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/leaflet": "^1.9.12",
-    "@types/node": "^16.18.108",
-    "@types/react": "^18.3.5",
-    "@types/react-dom": "^18.3.0",
-    "axios": "^1.7.7",
-    "cors": "^2.8.5",
-    "dat.gui": "^0.7.9",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.1",
-    "http-proxy-middleware": "^3.0.3",
-    "leaflet": "^1.9.4",
-    "openai": "^4.73.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-feather": "^2.0.10",
-    "react-leaflet": "^4.2.1",
-    "react-scripts": "^5.0.1",
-    "react-webcam": "^7.2.0",
-    "sass": "^1.78.0",
-    "save": "^2.9.0",
-    "simplex-noise": "^4.0.3",
-    "three": "^0.169.0",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4",
-    "ws": "^8.18.0"
-  },
+  "repository": "#",
+  "license": "UNLICENSED",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "zip": "zip -r realtime-api-console.zip . -x 'node_modules' 'node_modules/*' 'node_modules/**' '.git' '.git/*' '.git/**' '.DS_Store' '*/.DS_Store' 'package-lock.json' '*.zip' '*.tar.gz' '*.tar' '.env'",
-    "relay": "nodemon ./relay-server/index.js",
-    "dev": "run-p relay start"
+    "build": "webpack --config ./bundler/webpack.prod.js",
+    "dev": "webpack serve --config ./bundler/webpack.dev.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@types/dat.gui": "^0.7.13",
-    "@types/three": "^0.169.0",
-    "gh-pages": "^6.2.0",
-    "nodemon": "^3.1.7",
-    "npm-run-all": "^4.1.5"
+  "dependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.3.0",
+    "file-loader": "^6.2.0",
+    "glslify-loader": "^2.0.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.3.0",
+    "portfinder-sync": "0.0.2",
+    "raw-loader": "^4.0.2",
+    "stats.js": "^0.17.0",
+    "style-loader": "^3.3.0",
+    "three": "^0.132.2",
+    "tweakpane": "^3.0.5",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1",
+    "webpack-merge": "^5.8.0"
   }
 }
